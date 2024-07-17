@@ -19,7 +19,7 @@ struct QuestionThree: View {
             Text("Question 2: What was the most successful movie in 2023? 🍿")
             
             Button("Barbie") {
-                response = " Correct! The movie made $1.4 Billion! 💖"
+                response = " Correct! The movie made $1.4 billion! 💖"
             }
             
             Button("8") {
