@@ -14,29 +14,46 @@ struct ContentView: View {
     var body: some View {
         
         NavigationStack {
-            Text("Movie Quiz")
-            
-            Text("Question 1: What is the highest grossing movie of all time? 💵")
-            
-            Button("Avatar") {
-                response = "This movie made over $2.9 billion! ✅"
-            }
-            Button("Avengers: Endgame") {
-                response = " Wrong ❌"
-            }
-            Button("Titanic") {
-              response = "Wrong ❌"
+            VStack{
+                Text("Movie Quiz")
+                    .font(.largeTitle)
+                    .foregroundColor(Color.pink)
+                    
+    Spacer()
+                Text("Question 1: What is the highest grossing movie of all time? 💵")
+                    .font(.title)
+                    .foregroundColor(Color.green)
+                    .multilineTextAlignment(.center)
+                Button("Avatar") {
+                    response = "This movie made over $2.9 billion! ✅"
+                    }
+                .foregroundColor(.purple)
+                .font(.title3)
+                
+                Button("Avengers: Endgame") {
+                    response = " Wrong ❌"
+               
                 }
-            
-            Text(response)
-
-            NavigationLink(destination: QuestionTwo()) {
-                Text("Next Question")
+                .foregroundColor(.purple)
+                .font(.title3)
+                Button("Titanic") {
+                    response = "Wrong ❌"
+               
+                }
+                .foregroundColor(.purple)
+                    .font(.title3)
+                
+                Text(response)
+                Spacer()
+                NavigationLink(destination: QuestionTwo()) {
+                    Text("Next Question")
+                        .fontWeight(.bold)
+                }
             }
         }
+        .padding()
     }
 }
-
 #Preview {
     ContentView()
 }

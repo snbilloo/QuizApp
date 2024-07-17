@@ -15,27 +15,41 @@ struct QuestionThree: View {
         
         NavigationStack {
             Text("Movie Quiz")
-            
-            Text("Question 2: What was the most successful movie in 2023? 🍿")
+                .foregroundColor(Color.pink)
+                .font(.largeTitle)
+            Spacer()
+            Text("Question 3: What was the most successful movie in 2023? 🍿")
+                .font(.title)
+                .foregroundColor(Color.red)
+                .multilineTextAlignment(.center)
             
             Button("Barbie") {
                 response = " Correct! The movie made $1.4 billion! 💖"
             }
+            .foregroundColor(.purple)
+            .font(.title3)
             
-            Button("8") {
+            Button("Oppenheimer") {
                 response = " Wrong ❌"
             }
-            Button("11") {
-                response = ("Correct! The movie was Lord of the Rings: Return of the King ✅")
+            .foregroundColor(.purple)
+            .font(.title3)
+            Button("Across The Spiderverse") {
+                response = " Wrong ❌"
             }
+            .foregroundColor(.purple)
+            .font(.title3)
             
             Text(response)
-            
-            NavigationLink(destination: QuestionThree()) {
-                Text("Next Question")
+            Spacer()
+            NavigationLink(destination: ContentView()) {
+                Text("Restart")
+                    .fontWeight(.bold)
+            }
+        }
+        .padding()
     }
 }
-
 #Preview {
     QuestionThree()
 }
